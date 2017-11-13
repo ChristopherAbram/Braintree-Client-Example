@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="fi.jamk.android.braintreeexample">
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:label="Checkout">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,7 +22,8 @@
             </intent-filter>
         </activity>
 
-        <!-- Required to use PayPal -->
+        <!--
+        Required to use PayPal
         <activity android:name="com.paypal.android.sdk.payments.PayPalProfileSharingActivity" />
         <activity android:name="com.paypal.android.sdk.payments.ProfileSharingConsentActivity" />
         <activity android:name="com.paypal.android.sdk.payments.FuturePaymentInfoActivity" />
@@ -29,10 +32,13 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <service android:name="com.paypal.android.sdk.payments.PayPalService"
             android:exported="false" />
+        -->
+
 
         <!-- Required to use 3D Secure -->
         <activity android:name="com.braintreepayments.api.threedsecure.ThreeDSecureWebViewActivity" />
-
+        <activity android:name=".SuccessActivity" />
+        <activity android:name=".FailureActivity"></activity>
     </application>
 
 </manifest>

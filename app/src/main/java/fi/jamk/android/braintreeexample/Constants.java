@@ -5,6 +5,7 @@ package fi.jamk.android.braintreeexample;
  */
 
 public class Constants {
-    public static final String SERVER = "payment.krzysztofabram.pl";
+    public static final String SERVER = "http://payment.krzysztofabram.pl";
     public static final String CLIENT_TOKEN = "clientToken";
+    public static final String TRANSACTION = "transaction";
 }
